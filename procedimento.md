@@ -50,3 +50,9 @@ rodando runserver
 
 `$ python manager.py runserver`
 
+Para acessar o admin/ é necessário rodar o seguinte comnando:
+
+`$ python manage.py migrate
+`
+
+
