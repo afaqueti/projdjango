@@ -269,3 +269,61 @@ class Migration(migrations.Migration):
         ),
     ]
 
+===========================================================================
+Admin
+
+Para acessar o admin é necessário acessar
+http://127.0.0.1:8000/admin/
+
+e consequentemente criar um usuário com o seguinte comando:
+
+`$ python manage.py createsuperuser
+`
+Email adress: se necessário 
+password : xxxxx
+Confirma password : xxxx
+
+Dentro do admin o Django possibilita o gerenciamento de todos os recurso de tabelas
+e gestão de usuário que for necessário, inclusive a gestão de grupos de usuários
+
+Será feito uma inclusão da tabela cliente atraves da Class no arquivo "admin.py"
+
+Com oseguinte comando:
+necessário importar o pacote da class pessoas:
+
+`from .models import Pessoa
+`
+
+`admin.site.register(Pessoa)
+`
+
+Com esse procedimento já conseguimos visualizar os models dentro do admin.
+
+`from django.db import models
+`
+
+`class Pessoa(models.Model):
+
+    primeiro_nome = models.CharField(max_length=30)
+    segundo_nome = models.CharField(max_length=30)
+    idade = models.IntegerField()
+    salario = models.DecimalField(max_digits=5, decimal_places=2)
+    apelido = models.CharField(max_length=15)
+    matricula = models.CharField(max_length=20)`
+
+    def __str__(self):
+        return self.primeiro_nome + ' ' + self.segundo_nome
+
+
+
+
+
+
+
+
+
+
+
+
+
+
