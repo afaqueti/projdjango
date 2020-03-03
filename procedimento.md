@@ -121,7 +121,7 @@ Função gerada dentro de outra função:
 `def fname(request, nome):`
 
     res = lerDoBanco(nome)
-    if res == ['idade'] > 0:
+    if res['idade'] > 0:
         return HttpResponse(str(res['nome']) + ' você tem ' + str(res['idade']))
     else:
         return HttpResponse('Pessoa não encontrada')
