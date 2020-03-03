@@ -54,5 +54,78 @@ Para acessar o admin/ é necessário rodar o seguinte comnando:
 
 `$ python manage.py migrate
 `
+===========================================================================
+Criando as urls
+URL RESOLOTIPN - URLS.PY
+
+Representa as devidas requições representa a porta das request. mandando para as devidas view.
 
 
+para criar uma url será necessario acessar o arquivo  urls.py. vamos criar uma simples urls
+dentro do arquivo informado.
+
+`path('helo/', hello),
+`
+
+Após gerar o path dentro do arquivo urls.py devemos criar um arquivo chamdo viwes.py dentro projeto 
+(proj_django) para que seja informada as devidas funções 
+
+`def hello(request):
+    pass`
+
+Consequantemente devemos importar dentro da urls.py o arquivo wiews.py com o seguinte comando:
+
+`from django.contrib import admin
+`
+`from django.urls import path
+`
+`from .views import hello
+`
+`urlpatterns = [
+    path('helo/', hello),
+    path('admin/', admin.site.urls),`
+
+necessariamento tabém devemos usar a biblioteca HttpRespose
+
+`from django.http import HttpRespose`
+
+`def hello(request):
+    num = 21
+    if num > 20:
+        return HttpResponse(num`)
+
+===========================================================================
+Funções
+
+Dentro do fluxo as funções são as VIEWS:
+
+Segue exemplo de função gerada dentro da VIEWS
+Função gerada dentro de outra função:
+
+
+`def lerDoBanco(nome):`
+
+    lista_nome = [
+        {'nome':'Nicolas', 'idade':10},
+        {'nome':'Renata', 'idade':20},
+        {'nome':'Alessandro', 'idade':30}
+    ]
+
+    for pessoa in lista_nome:
+        if pessoa['nome'] == nome:
+            #return HttpResponse(str(pessoa['nome']))
+            return pessoa
+    else:
+        return {'nome': 'Nome não informado', 'idade': 0}
+
+`def fname(request, nome):`
+
+    res = lerDoBanco(nome)
+    if res == ['idade'] > 0:
+        return HttpResponse(str(res['nome']) + ' você tem ' + str(res['idade']))
+    else:
+        return HttpResponse('Pessoa não encontrada')
+        
+
+
+d
