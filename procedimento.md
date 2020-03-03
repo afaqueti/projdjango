@@ -127,5 +127,145 @@ Função gerada dentro de outra função:
         return HttpResponse('Pessoa não encontrada')
         
 
+===========================================================================
+Model
 
-d
+Model's são classe que descreve o modelo de negocio.
+
+Para iniciar devemos gerar um APP, pois dentro do projeto podemos criar vairas
+APP's para gerenciar nossos model's.
+
+Para isso devemos criar uma APP de clientes. Lembrando que o nome cliente devido 
+a aplicação ser para gestão de clientes.
+
+`$ python manage.py startapp clientes
+`
+
+Com esse comando geramos a estrutura da nossa APP.
+
+`from django.db import models
+`
+
+`class Person(models.Model):
+    primeiro_nome = models.CharField(max_length=30)
+    segundo_nome = models.CharField(max_length=30)
+    idade = models.IntegerField()
+    salario = models.DecimalField(max_digits=5, decimal_places=2)`
+    
+As classe são tratadas como as regras de negocio do cliente. Portanto esse são os campos gerados
+para imputar os devidos registro dentro do banco de dados.
+
+Para verificar as configuraçẽos de banco de dados devemos abrir o arquivo
+"setings.py do proj_django".
+
+Portanto para que uma APP seja registrada no banco de dados devemos informar na lista 
+abaixo nas aplicações de definição.
+
+`# Application definition
+`
+
+`INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'clientes',
+]`
+
+Apos executar o procedimento acima devemos rodar o seguinte comando:
+
+`$ python manage.py makemigrations
+`
+Portanto o Django cria um arquivo dentro da pasta migrations:
+
+`Migrations for 'clientes':
+  clientes/migrations/0001_initial.py
+    - Create model Person`
+
+Portanto o comando para criar no banco de dados é o seguinte:
+
+`$ python manage.py migrate`
+
+
+`Operations to perform:
+  Apply all migrations: admin, auth, clientes, contenttypes, sessions
+Running migrations:
+  Applying clientes.0001_initial... OK`
+  
+A partir desse momento o django criou os campos da classe na pasta 
+cliente, consequentemente dentro do branco de dados SQlite3.
+
+Para criar um novo campo conforme a classe gerada , será necessário adicionar
+dentro do models o novo campo e consequentemente incluir no arquivo:
+0001_initial.py.
+
+class Pessoa(models.Model):
+
+    primeiro_nome = models.CharField(max_length=30)
+    segundo_nome = models.CharField(max_length=30)
+    idade = models.IntegerField()
+    salario = models.DecimalField(max_digits=5, decimal_places=2)
+    apelido = models.CharField(max_length=15)
+    matricula = models.CharField(max_length=20)
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='Pessoa',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('primeiro_nome', models.CharField(max_length=30)),
+                ('segundo_nome', models.CharField(max_length=30)),
+                ('idade', models.IntegerField()),
+                ('salario', models.DecimalField(decimal_places=2, max_digits=5)),
+                ('apelido', models.CharField(max_length=30)),
+                ('matricula', models.CharField(max_length=30)),
+            ],
+        ),
+    ]
+
+
+
+
+Após executar esse procedimento devemos rodar os comandos :
+
+`python manage.py makemigrations`
+
+Migrations for 'clientes':
+  clientes/migrations/0003_auto_20200303_1257.py
+    - Alter field matricula on pessoa
+
+`$ python manage.py migrate
+`
+Operations to perform:
+  Apply all migrations: admin, auth, clientes, contenttypes, sessions
+Running migrations:
+  Applying clientes.0003_auto_20200303_1257... OK
+
+Pois o Django irá executar uma ação de incluir o campo em um arquivo e no outro
+alterar.
+
+Segue abaixo:
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('clientes', '0002_auto_20200303_1255'),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name='pessoa',
+            name='matricula',
+            field=models.CharField(max_length=20),
+        ),
+    ]
+
