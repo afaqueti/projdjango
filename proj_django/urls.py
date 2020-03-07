@@ -15,12 +15,18 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
-from .views import hello
-from .views import fname
+from django.urls import path, include
+from .views import indexpag
+from .views import fname,fname2
+from django.conf import settings
+from django.conf.urls.static import static
+from clientes import urls as clientes_urls
 
 urlpatterns = [
-    path('hello/', hello),
-    path('pessoa/<str:nome>', fname),
     path('admin/', admin.site.urls),
-]
+    path('pessoa/<str:nome>', fname),
+    path('index_pag/', indexpag),
+    path('pessoa2/<str:nome>', fname2),
+    path('pessoa/', include(clientes_urls)),
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

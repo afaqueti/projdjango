@@ -314,16 +314,272 @@ Com esse procedimento já conseguimos visualizar os models dentro do admin.
     def __str__(self):
         return self.primeiro_nome + ' ' + self.segundo_nome
 
+===========================================================================
+Templates
+
+Os Templates servem para definir a forma de response na estrutura do django.
+portanto devemos criar uma pasta com qualquer nome, pois para manter um padrão 
+podemos gerar uma pasta chamada  "templates" dentro do nosso projeto.
+
+Após criar uma pasta templates para geramos os arquivos .html
+OBS: Criei a pasta em formato de pacote .py ( __init__.py)
+
+executado os devidos procedimento vamos acessar os arquivos (urls.py), (views.py), (settings)
+
+1- primeiro:
+
+Arquivo - settings.py
+
+    na linha DIRD:['templates'] informe a pasta que foi criada onde ficará os .html's
+    
+    TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]-
+
+
+2 - Segundo:
+    
+Aquivo - views.py
+
+from django.http import HttpResponse
+
+from django.shortcuts import render
+
+def indexpag(request):
+    return render(request, 'index.html')
+
+Esse metodo irá informar que existe uma função (def) que ira reinderizar o arquivo 
+.hmtl que foi gerado dentro da pasta template, conforme informado anteriormente.
+
+
+3 - Terceiro
+
+Arquivo - urls.py
+
+
+from django.contrib import admin
+
+from django.urls import path
+
+from .views import indexpag
+
+from .views import fname,fname2
+
+
+urlpatterns = {
+
+    path('pessoa/<str:nome>', fname),
+    path('admin/', admin.site.urls),
+    path('index_pag/', indexpag),
+    path('pessoa2/<str:nome>', fname2),
+
+}
+
+
+Dentro das urls vamos informar em qual função (def) se encontra nossa pagina .html
+consequentemete, iremos acessar as devidas paginas.
+
+OBS: devemos importar o pacote função (def) assim que gerar os devidos path.
+
+Feito esse procedimento devemos acessar o seguinte link:
+
+http://127.0.0.1:8000/index_pag/
+
+
+4 -Quarto
+
+Arquivo .HTML
+
+Dentro do htmls podemos gerar algumas condições para definição de viwers na aplaicação.
+Segue exemplo:
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Bem vindo a pesquisa de idade!</h1>
+
+<br>
+    {{ v_nome }} você tem {{ v_idade }}
+
+</br>
+
+<h3>
+
+    {% if v_idade >= 18 %}
+
+        <b> Você pode tirar sua habilitação </b>
+
+    {% else %}
+
+            <b>Espere mais um pouco </b>
+
+    {%endif%}
+</h3>
+
+
+</body>
+</html>
+
+Condição desenvolvida pela linguagem JINJA 
 
 
 
+===========================================================================
+Arquivos statics
 
 
+O arquivo static trata dirtamente dos stilos do html, portanto a referencia será o CSS
+
+inicialmente devemos criar uma pasta camada  "statics" pode ser o nome que quiser
+dentro do projeto.
+
+apó gerar a pasta devemos acessar o arquivo "settings.py" na linha:
+
+Static files (CSS, JavaScript, Images)
+https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    'clientes/statics',
+
+Criar o STATICFILES conforme segue acima, consequentemente informa a pasta criada, 
+pois a partir desse endereço que o django irá defenir o acesso ao stilo do css definido
+
+apos gerar esse procedimento devomos acessar o .html para inserir o load static
+
+{% load static %}
+dentro do html
+
+segue exemplo:
+
+`{% load static %}
+`
+
+`link rel="stylesheet" href="{% static 'style.css' %}"
+`
+
+isso irá referenciar o caminho para o css.
+
+OBS: esse procedimento irá funcionar conforme as definições imputadas nas views.
 
 
+===========================================================================
+Erros
+
+Caso a porta do localhost informe que esta sendo usada pode rodar o seguinte comando
+
+`sudo fuser -k 8000/tcp
+`
+
+Em caso do erro abaixo
+'set' object is not reversible [duplicate]
+segue a solução: Me de chaves {} para cochetes []
+
+urlpatterns = [
+
+    path('admin/', admin.site.urls),
+    path('pessoa/<str:nome>', fname),
+    path('index_pag/', indexpag),
+    path('pessoa2/<str:nome>', fname2),
+
+]
 
 
+Django [Errno 13] Permission denied:
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'MEDIA')
+
+===========================================================================
+Arquivo de Media
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('pessoa/<str:nome>', fname),
+    path('index_pag/', indexpag),
+    path('pessoa2/<str:nome>', fname2),
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+Importante dizer que esse metodo implatando não é um padrão , pois esse proceidmento 
+server para o projeto em desenvolvimento.
+
+O Django não funciona com um gerenciamento de media, portanto é necessário importar
+os arquivos para um serviço melhor adptado para armazenamento de arquivos e medias
+
+O django cuida somente de arquivos do python
+
+===========================================================================
+CRUD
+
+C = Criar os objetos
+R = Ler os objetos
+U = Update os objetos
+D = Deletar os objetos
+
+
+Exportanto as URLS internas do projeto para a pasta padrão.
+
+Primeiro precisamos criar uma pastas dentro do projeto raiz chamda 'urls.py'
+segue exemplo:
+
+`from django.urls import path
+`
+
+`from .views import pessoa_list
+`
+
+urlpatterns = [
+    path('list/', pessoa_list ),
+
+Executdo esse procedimento devemos acessar as urls do projeto 'proj_django'
+e importar alguma pacotes
+
+`from django.urls import path, include
+`
+
+`from clientes import urls as clientes_urls
+`
+
+criando a seguinte path:
+
+`path('pessoa/', include(clientes_urls)),
+`
+
+
+abra a viwer.py do projeto raiz 'projdjango' e inclua a seguinte função:
+
+`from django.shortcuts import render
+`
+
+def pessoa_list(request):
+    return render(request, 'pessoa.html')
+    
+Pois esse função irá retornar a urls pessoa.html conforme as funções definidas.
 
 

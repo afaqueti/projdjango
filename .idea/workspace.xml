@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53960b9-41bb-4fb3-a0de-d7a893cf168c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/clientes/media/fotos_clientes/jose.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/media/fotos_clientes/jose_B4tgw9G.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/media/fotos_clientes/jose_hCeYzmP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/media/fotos_clientes/jose_wv0fVEF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/statics/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/statics/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/clientes/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientes/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes/migrations/0002_auto_20200303_1255.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes/migrations/0003_auto_20200303_1257.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clientes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/clientes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/clientes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3_v1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/procedimento.md" beforeDir="false" afterPath="$PROJECT_DIR$/procedimento.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proj_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj_django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj_django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj_django/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj_django/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj_django/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,34 +31,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/procedimento.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1162">
-                <caret line="279" column="33" lean-forward="true" selection-start-line="279" selection-end-line="280" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clientes/admin.py">
+        <entry file="file://$PROJECT_DIR$/clientes/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clientes/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state>
+              <caret selection-end-line="5" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -56,19 +43,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clientes/migrations/0001_initial.py">
+        <entry file="file://$PROJECT_DIR$/clientes/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proj_django/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+            <state relative-caret-position="60">
+              <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -76,8 +54,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proj_django/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            <state relative-caret-position="202">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/procedimento.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="737">
+                <caret line="574" lean-forward="true" selection-start-line="574" selection-end-line="574" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clientes/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -85,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proj_django/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="435">
+              <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="44" />
               <folding>
                 <element signature="e#636#668#0" expanded="true" />
               </folding>
@@ -95,6 +97,14 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -108,22 +118,30 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/proj_django/urls.py" />
-        <option value="$PROJECT_DIR$/proj_django/views.py" />
-        <option value="$PROJECT_DIR$/procedimento.md" />
         <option value="$PROJECT_DIR$/clientes/migrations/0004_endereco.py" />
+        <option value="$PROJECT_DIR$/clientes/migrations/0005_auto_20200303_2224.py" />
+        <option value="$PROJECT_DIR$/clientes/models_include.py" />
+        <option value="$PROJECT_DIR$/clientes/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/meus_templates/index.html" />
+        <option value="$PROJECT_DIR$/clientes/templates/pessoa.html" />
+        <option value="$PROJECT_DIR$/proj_django/views.py" />
+        <option value="$PROJECT_DIR$/clientes/templates/index.html" />
+        <option value="$PROJECT_DIR$/clientes/statics/style.css" />
         <option value="$PROJECT_DIR$/clientes/admin.py" />
         <option value="$PROJECT_DIR$/proj_django/settings.py" />
-        <option value="$PROJECT_DIR$/clientes/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/clientes/models.py" />
+        <option value="$PROJECT_DIR$/proj_django/urls.py" />
+        <option value="$PROJECT_DIR$/clientes/urls.py" />
+        <option value="$PROJECT_DIR$/clientes/views.py" />
+        <option value="$PROJECT_DIR$/procedimento.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
-    <option name="y" value="25" />
-    <option name="width" value="960" />
-    <option name="height" value="1022" />
+    <option name="y" value="27" />
+    <option name="width" value="950" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -148,12 +166,6 @@
             <path>
               <item name="projdjango" type="b2602c69:ProjectViewProjectNode" />
               <item name="projdjango" type="462c0819:PsiDirectoryNode" />
-              <item name="clientes" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projdjango" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projdjango" type="462c0819:PsiDirectoryNode" />
               <item name="proj_django" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -164,8 +176,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../projetos" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/clientes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -178,6 +196,34 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="admin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="projdjango" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clientes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clientes/admin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.admin" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -205,12 +251,31 @@
     <frame x="0" y="25" width="1920" height="1022" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986821" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1960991" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32922733" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32922733" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32922733" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1960991" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32922733" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -222,7 +287,10 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/proj_django/__init__.py">
@@ -241,90 +309,141 @@
     <entry file="file://$PROJECT_DIR$/proj_django/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/migrations/0002_auto_20200303_1135.py">
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0002_auto_20200303_1135.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0003_auto_20200303_1137.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0003_auto_20200303_1257.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0002_auto_20200303_1255.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0005_auto_20200303_1613.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0004_endereco.py" />
+    <entry file="file://$PROJECT_DIR$/proj_django/asgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/migrations/0003_auto_20200303_1137.py">
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0002_auto_20200303_2159.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0004_auto_20200303_2222.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0003_auto_20200303_2208.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0005_auto_20200303_2224.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/models_include.py" />
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/proj_django/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/clientes/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/proj_django/urls.py">
+    <entry file="file://$PROJECT_DIR$/meus_templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/clientes/templates/pessoa.html" />
+    <entry file="file://$PROJECT_DIR$/venvpdj/bin/django-admin">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venvpdj/bin/render">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venvpdj/lib/python3.7/site-packages/localflavor/br/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="870">
+          <caret line="58" column="35" lean-forward="true" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
           <folding>
-            <element signature="e#636#668#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/migrations/0003_auto_20200303_1257.py">
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0004_auto_20200305_2154.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0003_auto_20200305_2154.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0002_auto_20200305_2127.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0010_empresa.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0002_auto_20200306_0003.py" />
+    <entry file="file://$PROJECT_DIR$/clientes/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="5" selection-end-line="18" />
+        <state relative-caret-position="240">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/migrations/0002_auto_20200303_1255.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/migrations/0005_auto_20200303_1613.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/migrations/0004_endereco.py">
+    <entry file="file://$PROJECT_DIR$/proj_django/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="1920">
+          <caret line="128" column="45" selection-start-line="128" selection-start-column="45" selection-end-line="128" selection-end-column="45" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/statics/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/media/fotos_clientes/jose_K1hDq3v.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/clientes/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        <state relative-caret-position="420">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proj_django/settings.py">
+    <entry file="file://$PROJECT_DIR$/clientes/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+        <state relative-caret-position="135">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj_django/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj_django/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="44" />
+          <folding>
+            <element signature="e#636#668#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/procedimento.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1162">
-            <caret line="279" column="33" lean-forward="true" selection-start-line="279" selection-end-line="280" />
+          <first_editor relative-caret-position="737">
+            <caret line="574" lean-forward="true" selection-start-line="574" selection-end-line="574" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
