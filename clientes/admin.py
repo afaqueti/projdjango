@@ -3,7 +3,7 @@ from .models import Pessoa, Endereço, Estado, Municipio, Paise, Cargo, Empresa
 
 #clientes
 class PessoaAdmin(admin.ModelAdmin):
-    list_display = ('nome','email','cpf','cnpj','matricula')
+    list_display = ('id','nome','email','cpf','cnpj','matricula')
 admin.site.register(Pessoa, PessoaAdmin)
 
 #clientes

@@ -535,7 +535,9 @@ os arquivos para um serviço melhor adptado para armazenamento de arquivos e med
 O django cuida somente de arquivos do python
 
 ===========================================================================
-CRUD
+CRUD = C
+
+Preparação para CRUD - Extraindo URLs da App clientes
 
 C = Criar os objetos
 R = Ler os objetos
@@ -583,3 +585,239 @@ def pessoa_list(request):
 Pois esse função irá retornar a urls pessoa.html conforme as funções definidas.
 
 
+===========================================================================
+CRUD = R
+Create (Criando novos clientes e salvando no banco de dados)
+
+Iniciamos criando uma url dentro do arquivo urls.py
+
+from django.urls import path
+from .views import pessoa_list, endereco_list, nova_pessoa
+
+conforme visto abaixo foi criada 'nova_pessoa'
+
+`urlpatterns = [
+
+    path('list/', pessoa_list),
+    path('list/', endereco_list),
+    path('nova/', nova_pessoa),
+]
+`
+
+Após gerar a urls vamos para as viwes.py:
+
+Criamos um função 
+
+Verificar metodos http post,get, delete entre outros.
+
+devemos criar um arquivo forms.py dentro do nossa pasta cliente e importarmos 
+
+`from django.forms import ModelForm
+`
+
+`from django.forms import ModelForm
+`
+`from .models import Pessoa
+`
+class Formpessoas(ModelForm):
+
+    class Meta:
+        model = Pessoa
+        fields = ['nome','apelido','sexo','email','cargo','cpf','cnpj','matricula','empresa']
+        
+
+
+Crair dentro do html a vairavle form
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="{% url 'nova_pessoa' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+         <button type="submit" > Salvar </button>
+    </form>
+       
+
+</body>
+</html>
+
+
+Portanto o formulario não irá validar nada dentro do banco de dados pois o formulario 
+não está validando as informações, para isso acontecer devemos gerar um avalidação dentro
+do views.py
+
+def nova_pessoa(request):
+
+    form = Formpessoas(request.POST, None)
+    if form.is_valid():
+        form.save()
+    return render(request, 'form_pessoa.html', {'form':form})
+    
+inserimos uma condição para dizer se o formulario for valido então salve
+Segue abaixo modelo completo contemplando POST, request.FILES
+
+        
+def nova_pessoa(request):
+
+    form = Formpessoas(request.POST, request.FILES, None)
+    if form.is_valid():
+        form.save()
+        return redirect('pessoa_list')
+    return render(request, 'form_pessoa.html', {'form':form})
+    
+    
+Também modelo do html
+
+<form action="{% url 'nova_pessoa'%}" method="post" enctype="multipart/form-data">
+         
+         {% csrf_token %}
+        {{ form }}
+        <button type="submit" > Salvar </button>
+
+    </form>
+    
+    
+e suas urls
+
+from django.urls import path
+
+from .views import pessoa_list, endereco_list, nova_pessoa
+
+
+urlpatterns = [
+
+    path('list/', pessoa_list, name='pessoa_list'),
+    path('list/', endereco_list, name='endereço_list'),
+    path('nova/', nova_pessoa, name='nova_pessoa'),
+]    
+
+===========================================================================
+CRUD = U
+
+from django.urls import path
+from .views import pessoa_list, endereco_list, nova_pessoa, update_pessoa
+
+
+urlpatterns = [
+
+    path('list/', pessoa_list, name='pessoa_list'),
+    path('list/', endereco_list, name='endereço_list'),
+    path('nova/', nova_pessoa, name='nova_pessoa'),
+    path('update/<int:id>/', update_pessoa, name='update_pessoa'),
+
+]
+
+def update_pessoa(request, id):
+    pessoa = get_object_or_404(Pessoa, pk=id)
+    form = Formpessoas(request.POST or None, request.FILES or None, instance=pessoa)
+
+    if form.is_valid():
+        form.save()
+        return redirect('pessoa_list')
+    return render(request, 'form_pessoa.html', {'form': form})
+    
+    
+    
+from django.forms import ModelForm
+
+from .models import Pessoa
+
+class Formpessoas(ModelForm):
+
+    class Meta:
+        model = Pessoa
+        fields = ['nome','apelido','sexo','email','cargo','cpf','cnpj','matricula','empresa','foto']
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+        {{ form }}
+        <button type="submit" > Salvar </button>
+
+    </form>
+
+<br>
+
+<a href="{% url 'pessoa_list' %}">Voltar para Lista</a>
+
+<br>
+
+<a href="{% url 'nova_pessoa'%}">Nova Pessoa</a>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+        <h3>Lista de Pessoas</h3>
+
+                <table>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Apelido</th>
+                            <th>Email</th>
+                            <th>cargo</th>
+                            <th>CPF</th>
+
+                        </tr>
+                {% for pe in pessoas %}
+                        <tr>
+                            <td><a href="{% url 'update_pessoa' pe.id %}">{{pe.nome}}</a></td>
+                            <td>{{pe.apelido}}</td>
+                            <td>{{pe.email}}</td>
+                            <td>{{pe.cargo}}</td>
+                            <td>{{pe.cpf}}</td>
+
+                        </tr>
+
+                {% endfor %}
+                </table>
+{% endblock content %}
+
+<br>
+
+<a href="{% url 'nova_pessoa'%}">Nova Pessoa</a>
+
+
+
+</body>
+</html>
+
+
+
+
+===========================================================================
+CRUD = D
+    

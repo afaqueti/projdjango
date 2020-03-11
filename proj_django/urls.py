@@ -24,7 +24,7 @@ from clientes import urls as clientes_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pessoa/<str:nome>', fname),
+    path('pessoa1/<str:nome>', fname),
     path('index_pag/', indexpag),
     path('pessoa2/<str:nome>', fname2),
     path('pessoa/', include(clientes_urls)),

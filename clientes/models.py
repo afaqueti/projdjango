@@ -1,5 +1,6 @@
 from django.db import models
 
+
 #Clientes
 class Pessoa(models.Model):
     SEXO_CHOICES = (
@@ -14,7 +15,7 @@ class Pessoa(models.Model):
     cpf = models.CharField(max_length=11,null=True,blank=True)
     cnpj = models.CharField(max_length=11, null=True, blank=True)
     matricula = models.CharField(max_length=10, null=True, blank=True)
-    empresa = models.ForeignKey('Empresa', on_delete=models.CASCADE)
+    empresa = models.ForeignKey('Empresa', on_delete=models.CASCADE, null=True)
 
     foto = models.ImageField(upload_to='fotos_clientes', null=True, blank=True)
 
@@ -36,7 +37,6 @@ class Endereço(models.Model):
     logradouro = models.CharField(max_length=100)
     estado = models.ForeignKey('Estado', on_delete=models.CASCADE)
     municipio = models.ForeignKey('Municipio', on_delete=models.CASCADE)
-    cep = models.CharField(max_length=15)
     observacoes = models.TextField(max_length=1000)
 
 
